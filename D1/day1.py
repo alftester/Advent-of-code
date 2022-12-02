@@ -1,5 +1,5 @@
 
-with open('inputday1.txt', 'r') as file:
+with open('D1\inputday1.txt', 'r') as file:
     data = file.read().split('\n')
     
 i = 0

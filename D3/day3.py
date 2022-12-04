@@ -18,24 +18,27 @@ for line in data:
     
     countedlist = []
     for char in compartment1:
-        
         if char in compartment2 and compartment2.find(char) not in countedlist and char not in countedlist:
             prioritet = prioritet + int(values[char])
             countedlist.append(compartment2.find(char))
             countedlist.append(char)
             #Er her det går galt, den teller L to ganger. 
-    
+
     countedlist.clear()
 #Svar del 2
 #print(prioritet)
 
+prioritet1 = 0
 
+for i in range(0,len(data)-2,3):
+    Sekk1 = data[i]
+    Sekk2 = data[i+1]
+    Sekk3 = data[i+2]
 
-""" #Sjekk her om den finnes 
-    for char in compartment1:
-        countedlist = []
-        if char == compartment2[compartment2.find(char)] and compartment2.find(char) not in countedlist:
-            prioritet = prioritet + int(values[char])
-            countedlist.append(compartment2.find(char))
+    for char in Sekk1:
+        if char in Sekk2 and char in Sekk3 and char not in countedlist:
+            prioritet1 = prioritet1 + int(values[char])
+            countedlist.append(char)
     countedlist.clear()
-"""
+    
+print(prioritet1)
